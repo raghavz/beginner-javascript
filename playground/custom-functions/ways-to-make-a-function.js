@@ -27,3 +27,10 @@ expressions. Read further */
 (function(age) {
   return `You are cool and age ${age}`;
 })(10); // The (10) at the end shows that we call this function (just after declaring it).
+
+// FN 5 : Callback functions - TODO.
+function greeter1(name, c) {
+  console.log('Great Clicking!!');
+}
+
+// TODO - Next items Arrow functions, Methods. Refer https://www.notion.so/Beginner-JavaScript-e2ef045754d14e96b93791f638bbcaf6.
