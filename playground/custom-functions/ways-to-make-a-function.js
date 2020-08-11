@@ -19,3 +19,11 @@ const doctorizeFn = function(firstName) {
   return `Dr. ${firstName}`;
 };
 // doctorizeFn('John'); // It works !
+
+/* FN_3 : Anonymous function - A function with no name. These are used in callbacks and IIFE: immediately invoked function 
+expressions. Read further */
+
+// FN_4 : IIFE: immediately invoked function expressions.
+(function(age) {
+  return `You are cool and age ${age}`;
+})(10); // The (10) at the end shows that we call this function (just after declaring it).
