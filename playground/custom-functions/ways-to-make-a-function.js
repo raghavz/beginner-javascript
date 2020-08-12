@@ -64,5 +64,21 @@ button.addEventListener('click', handleClick);
 const inchToCM = inches => inches * 2.54; // return a single value such as number, string etc.
 const makePlayer = (first, last) => ({ name: `${first} ${last}`, points: 0 }); // return an Object. how ? Enclose code in ().
 
-// TODO - Next items Methods. Refer https://www.notion.so/Beginner-JavaScript-e2ef045754d14e96b93791f638bbcaf6.
-// Stopped at - module 2, lesson 15, time = 27:00.
+// FN_6 : Methods - Functions which live inside of Objects.
+const person = {
+  name: 'James Bond',
+  age: 25,
+
+  // Method.
+  showAge() {
+    console.log(`${this.name}'s age is ${this.age}`);
+  },
+
+  // Method expressed as an arrow function.
+  /* NOTE - The this keyword won't work inside an arrow function. It will give an undefined. */
+  greet: name => {
+    console.log(`Hi ${name} !`);
+  },
+};
+person.greet('Steve');
+person.showAge();
