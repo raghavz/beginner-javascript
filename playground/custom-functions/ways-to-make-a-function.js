@@ -1,9 +1,9 @@
 // The message should appear in browser console (browser can be opened via Live Server plugin for VS code).
 console.log('This js file works!'); // Open index.html to check if it can run this js script.
 
-// ***Ways to make a function :***
+// ***WAYS TO MAKE A FUNCTION :***
 
-// FN_1 : With function declaration.
+// FUNCTION_1 : With function declaration.
 
 // console.log(`Function declaration 1 : ${doctorize('James')} `); // Function call before function declaration - It works !
 function doctorize(firstName) {
@@ -11,7 +11,7 @@ function doctorize(firstName) {
 }
 // console.log(`Function declaration 2 : ${doctorize('James')} `); // Function call after function declaration - It works !
 
-// FN_2 : With function expression.
+// FUNCTION_2 : With function expression.
 /* Note : These are not hoisted ("refer - function hoisting"). Hence, you can't use such functions before they are declared. */
 
 // doctorizeFn('John'); // It fails ! Uncaught ReferenceError: Cannot access 'doctorizeFn' before initialization.
@@ -20,16 +20,16 @@ const doctorizeFn = function(firstName) {
 };
 // doctorizeFn('John'); // It works !
 
-/* FN_3 : Anonymous function - A function with no name. These are used in callbacks and IIFE: immediately invoked function 
+/* FUNCTION_3 : Anonymous function - A function with no name. These are used in callbacks and IIFE: immediately invoked function 
 expressions. Read further */
 
-// FN_4 : IIFE: immediately invoked function expressions.
+// FUNCTION_4 : IIFE: immediately invoked function expressions.
 /* These can be used in closures (coming soon) */
 (function(age) {
   return `You are cool and age ${age}`;
 })(10); // The (10) at the end shows that we call this function (just after declaring it).
 
-// FN_5 : Callback functions.
+// FUNCTION_5 : Callback functions.
 /* We'll first show some silly examples for callback functions. After that, we show a more realistic example. */
 
 function greeter1(name, callbackFunction) {
@@ -50,7 +50,7 @@ greeter1('Jane', function() {
   return 'Nice to meet you';
 }); // Callback using an anonymous function.
 
-/* More realistic example of callback function */
+/* A more realistic example of a callback function. */
 
 const button = document.querySelector('.clickMe'); // .clickMe is the class of a button in the index.html web page.
 function handleClick() {
@@ -58,13 +58,13 @@ function handleClick() {
 }
 button.addEventListener('click', handleClick);
 
-// FN_6 : Arrow functions.
+// FUNCTION_6 : Arrow functions.
 
 // Examples of Arrow functions with implicit return :
 const inchToCM = inches => inches * 2.54; // return a single value such as number, string etc.
-const makePlayer = (first, last) => ({ name: `${first} ${last}`, points: 0 }); // return an Object. how ? Enclose code in ().
+const makePlayer = (first, last) => ({ name: `${first} ${last}`, points: 0 }); // shorthand to return an Object - Enclose the code in ().
 
-// FN_6 : Methods - Functions which live inside of Objects.
+// FUNCTION_7 : Methods - Functions which live inside of Objects.
 const person = {
   name: 'James Bond',
   age: 25,
