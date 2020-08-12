@@ -24,6 +24,7 @@ const doctorizeFn = function(firstName) {
 expressions. Read further */
 
 // FN_4 : IIFE: immediately invoked function expressions.
+/* These can be used in closures (coming soon) */
 (function(age) {
   return `You are cool and age ${age}`;
 })(10); // The (10) at the end shows that we call this function (just after declaring it).
@@ -57,4 +58,11 @@ function handleClick() {
 }
 button.addEventListener('click', handleClick);
 
-// TODO - Next items Arrow functions, Methods. Refer https://www.notion.so/Beginner-JavaScript-e2ef045754d14e96b93791f638bbcaf6.
+// FN_6 : Arrow functions.
+
+// Examples of Arrow functions with implicit return :
+const inchToCM = inches => inches * 2.54; // return a single value such as number, string etc.
+const makePlayer = (first, last) => ({ name: `${first} ${last}`, points: 0 }); // return an Object. how ? Enclose code in ().
+
+// TODO - Next items Methods. Refer https://www.notion.so/Beginner-JavaScript-e2ef045754d14e96b93791f638bbcaf6.
+// Stopped at - module 2, lesson 15, time = 27:00.
