@@ -33,3 +33,5 @@ function myFunction1(){
     //console.log(`${item1}`);//will be 50 and not 10.
 }
 myFunction1();
+
+//TODO - Resume learning at module 3, lesson 17, time = 9:35.
