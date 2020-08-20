@@ -34,4 +34,16 @@ function myFunction1(){
 }
 myFunction1();
 
+//Scoping rules for Let, Var, Const variables.
+/*Var are function scoped, whereas Let and Const are block scoped.*/
+function myFunction2(name){
+    if(name === 'wes'){
+        var nice = true;//available everywhere in this function.
+        let praise = 'He is the nicest !';//available only in the if block.
+    }
+    console.log(`Is ${name} nice ?`);// Works !
+    //console.log(`${praise}`);// Fails ! Uncaught ReferenceError: praise is not defined.
+}
+myFunction2('wes');
+
 //TODO - Resume learning at module 3, lesson 17, time = 9:35.
