@@ -13,8 +13,8 @@ Other ways -
 We can select elements with document.querySelector('aSelector') and document.querySelectorAll('aSelector'). The argument we 
 pass to these functions is nearly similar to CSS Selectors.
 
-We also have dated/old ways of selecting elements from DOM like getElementById, getElementsByClassName, getElementsByTagName 
-getElementsByTagNameNS (NS is namespace) etc.
+We also have older ways to select elements from DOM like getElementById, getElementsByClassName, getElementsByTagName 
+getElementsByTagNameNS (NS is namespace) etc. We can still use these.
 
 */
 
