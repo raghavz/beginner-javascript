@@ -5,10 +5,9 @@ Best way - Load the JS before the </body> tag.
 Other ways -
 - use defer and async.
 - we can listen for the `DOMContentLoaded` event and then try to select elements from the page.
-
  */
 
-// LESSON - The DOM: Selecting elements on the page.
+// LESSON - The DOM - Selecting elements on the page.
 /*
 We can select elements with document.querySelector('aSelector') and document.querySelectorAll('aSelector'). The argument we 
 pass to these functions is nearly similar to CSS Selectors.
@@ -26,3 +25,5 @@ const imgs = document.querySelectorAll('.item img'); // .item refers to differen
 
 // Select something from an element instead of the document object. Can't use this with a NodeList obviously.
 const item2Image = item2.querySelector('img');
+
+// LESSON - The DOM - Element Properties and Methods.
