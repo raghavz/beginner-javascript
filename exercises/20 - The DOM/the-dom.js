@@ -57,3 +57,29 @@ pizzaList.insertAdjacentText('beforeend', '🍕');
 
 
 // LESSON 23 - The DOM - Working with Classes.
+
+const pic = document.querySelector('.nice');
+pic.classList.add('open');
+console.log('classList of an element :\n');
+console.log(pic.classList);
+
+
+// LESSON 24 - The DOM - Built in and Custom Data Attributes.
+
+//Built-in attributes :
+pic.alt = 'My alt text.';//Setter.
+console.log(`changed alt attribute of element to :\n${pic.alt}`);//Getter.
+
+//Alternatively, using getter and setter methods.
+pic.getAttribute('alt');
+pic.setAttribute('alt', 'Nice image.');
+
+//Custom attributes :
+
+//Creating custom attributes - Good approach ! Uses 'data-' prefix in name of custom attribute.
+pic.setAttribute('data-my-attrib', 'cool-stuff');
+
+//Accessing custom attributes.
+const custom = document.querySelector('.custom');
+console.log(custom.dataset);
+console.log(`Value of the custom attribute 'data-name' : ${custom.dataset.name}`);
