@@ -9,7 +9,7 @@ Other ways -
 - we can listen for the `DOMContentLoaded` event and then try to select elements from the page.
  */
 
-// LESSON - The DOM - Selecting elements on the page.
+// LESSON 21 - The DOM - Selecting elements on the page.
 
 /*
 We can select elements with document.querySelector('aSelector') and document.querySelectorAll('aSelector'). The argument we 
@@ -29,7 +29,7 @@ const imgs = document.querySelectorAll('.item img'); // .item refers to differen
 // Select something from an element instead of the document object. Can't use this with a NodeList obviously.
 const item2Image = item2.querySelector('img');
 
-// LESSON - The DOM - Element Properties and Methods.
+// LESSON 22 - The DOM - Element Properties and Methods.
 
 const heading = document.querySelector('h2'); // select the 1st h2 in the dom.
 
@@ -54,3 +54,6 @@ console.log(`innerHtml demo :\n${heading.outerHTML}`);
 const pizzaList = document.querySelector('.pizza');
 pizzaList.textContent = `${pizzaList.textContent} 🍕`;
 pizzaList.insertAdjacentText('beforeend', '🍕');
+
+
+// LESSON 23 - The DOM - Working with Classes.
