@@ -9,8 +9,9 @@ const shakeButton = document.querySelector('.shake');
 const { width, height } = canvas; // same as width = canvas.width, followed by height = canvas.height;
 
 // create random position for the starting dot on the canvas.
-/* Here, x & y are NOT cartesian coordinates like you see in a normal graph. x & y are a fraction of 
-the height & width of the canvas respectively.
+/*
+NOTE - Here, x & y are cartesian coordinates in the canvas. The origin (0,0) for a HTML canvas is the 
+upper left corner, unlike normal graphs where the origin is at the bottom left corner.
 */
 let x = Math.floor(Math.random() * width);
 let y = Math.floor(Math.random() * height);
