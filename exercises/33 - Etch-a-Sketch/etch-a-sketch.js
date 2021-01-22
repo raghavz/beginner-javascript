@@ -92,6 +92,9 @@ function clearCanvas() {
   // adding shake class so that our CSS code shakes the canvas.
   canvas.classList.add('shake');
 
+  // clear the canvas.
+  ctx.clearRect(0, 0, width, height);
+
   // wait till the end of the current shake & then stop the shaking.
   canvas.addEventListener(
     'animationend',
@@ -105,3 +108,6 @@ function clearCanvas() {
     { once: true }
   );
 }
+
+// make the shake button clear the canvas.
+shakeButton.addEventListener('click', clearCanvas);
