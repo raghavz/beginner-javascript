@@ -84,3 +84,24 @@ function handleKey(event) {
 
 // listen to pressing of arrow keys. They are used to move the brush.
 window.addEventListener('keydown', handleKey); // Listen to events for entire website & not just the canvas.
+
+// Shake function to clear the canvas.
+function clearCanvas() {
+  // console.log('done the shake');
+
+  // adding shake class so that our CSS code shakes the canvas.
+  canvas.classList.add('shake');
+
+  // wait till the end of the current shake & then stop the shaking.
+  canvas.addEventListener(
+    'animationend',
+    function() {
+      canvas.classList.remove('shake');
+    },
+    /* 
+      The "once: true" argument unbinds this listener after stopping the shaking. Otherwise, this function 
+      will add a new copy of this event listener everytime we press the shake button, which is useless. 
+     */
+    { once: true }
+  );
+}
