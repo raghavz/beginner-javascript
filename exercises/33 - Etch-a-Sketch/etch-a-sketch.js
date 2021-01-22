@@ -16,6 +16,10 @@ upper left corner, unlike normal graphs where the origin is at the bottom left c
 let x = Math.floor(Math.random() * width);
 let y = Math.floor(Math.random() * height);
 
+// specify the coloring used for drawing.
+let hue = 0;
+ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
 // specify the kind of brush for drawing.
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
@@ -31,6 +35,10 @@ const MOVE_AMOUNT = 10; // Length of line to draw when an arrow key is pressed o
 
 // write a draw function.
 function draw(options) {
+  // change the current color of the brush.
+  hue += 10; // a bigger count changes the color even more than previous color.
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
   // start the drawing.
   ctx.beginPath();
   ctx.moveTo(x, y);
