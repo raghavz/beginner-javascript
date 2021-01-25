@@ -34,3 +34,8 @@ const cardButtons = document.querySelectorAll('.card button');
 cardButtons.forEach(button =>
   button.addEventListener('click', handleCardButtonClick)
 );
+
+// Code to close the modal box.
+function closeModal() {
+  modalOuter.classList.remove('open');
+}
