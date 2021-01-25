@@ -35,7 +35,17 @@ cardButtons.forEach(button =>
   button.addEventListener('click', handleCardButtonClick)
 );
 
-// Code to close the modal box.
+// Code to close the modal box when user clicks outside the modal box.
 function closeModal() {
   modalOuter.classList.remove('open');
 }
+
+modalOuter.addEventListener('click', function(event) {
+  // The "!" sign here converts a variable into a boolean.
+  const isClickOutside = !event.target.closest('.modal-inner');
+
+  // Check if a click is outside the modal box.
+  if (isClickOutside) {
+    closeModal();
+  }
+});
