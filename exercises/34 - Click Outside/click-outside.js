@@ -49,3 +49,10 @@ modalOuter.addEventListener('click', function(event) {
     closeModal();
   }
 });
+
+// Code to close the modal box when user presses escape key.
+window.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
