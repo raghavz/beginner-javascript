@@ -12,14 +12,26 @@
 
 <body>
   <script>
-    const toppings = ['Mushrooms ', 'Tomatoes', 'Eggs', 'Chili', 'Lettuce', 'Avocado', 'Chiles', 'Bacon', 'Pickles', 'Onions', 'Cheese'];
+    const toppings = [
+      'Mushrooms ',
+      'Tomatoes',
+      'Eggs',
+      'Chili',
+      'Lettuce',
+      'Avocado',
+      'Chiles',
+      'Bacon',
+      'Pickles',
+      'Onions',
+      'Cheese',
+    ];
 
     const buns = ['egg', 'wonder', 'brioche'];
 
     const meats = {
       beyond: 10,
       beef: 5,
-      pork: 7
+      pork: 7,
     };
 
     const prices = {
@@ -39,7 +51,6 @@
       { comment: 'I DONT LIKE BURGERS', rating: 1 },
     ];
 
-
     /*
       Static Methods
     */
@@ -57,21 +68,41 @@
     */
 
     // Display all bun types with " or " - use join()
+    console.log(buns.join(' or '));
 
     // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into a string
+    const foodString = 'hot dogs,hamburgers,sausages,corn';
+    console.log(foodString.split(','));
 
     // take the last item off toppings with pop()
+    const cheese = toppings.pop();
+
     // add it back with push()
+    toppings.push(cheese);
+
     // take the first item off toppings with shift()
+    const mushrooms = toppings.shift();
+
     // add it back in with unshift()
+    toppings.unshift(mushrooms);
+
     // Do the last four,but immutable (with spreads and new variables)
 
-
     // Make a copy of the toppings array with slice()
+    const topsCopy = toppings.slice(0);
+
     // Make a copy of the toppings array with a spread
+    const topsCopy2 = [...toppings];
+
     // take out items 3 to 5 of your new toppings array with splice()
+    topsCopy.splice(3, 5);
+
     // find the index of Avocado with indexOf() / lastIndexOf()
+    console.log(toppings.findIndex(top => top === 'Avocado'));
+
     // Check if hot sauce is in the toppings with includes()
+    console.log(toppings.includes('Hot Sauce'));
+
     // add it if it's not
     // flip those toppings around with reverse()
 
@@ -80,20 +111,39 @@
     */
 
     // find the first rating that talks about a burger with find()
+    const burgRating = feedback.find(rating => rating.comment.includes('burg'));
+
     // find all ratings that are above 2 with filter()
+    const goodReviews = feedback.filter(review => review.rating > 2);
+
     // find all ratings that talk about a burger with filter()
+    const burgReviews = feedback.filter(review => review.comment.includes('burg'));
+
     // Remove the one star rating however you like!
+    const legitRatings = feedback.filter(single => single.rating !== 1);
 
     // check if there is at least 5 of one type of meat with some()
+    const enoughMeat = Object.values(meats).some(quantity => quantity >= 5);
+
     // make sure we have at least 3 of every meat with every()
+    const everyMeat = Object.values(meats).every(quantity => quantity >= 3);
+
     // sort the toppings alphabetically with sort()
+    const numbers = [1, 2, 100, 3, 200, 400, 155];
+    const sorted = numbers.sort((firstItem, secondItem) => firstItem - secondItem);
+
     // sort the order totals from most expensive to least with .sort()
+    const descendingTotals = orderTotals.sort((item1, item2) => item1 - item2);
+
     // Sort the prices with sort()
+    const sortedPrices = Object.entries(prices).sort(
+      (price1, price2) => price1[1] - price2[1]
+    );
+    console.log(sortedPrices);
 
     /*
       Looping Methods (next)
     */
-
   </script>
 </body>
 
