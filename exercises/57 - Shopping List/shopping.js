@@ -44,5 +44,12 @@ function displayItems() {
   list.innerHTML = html;
 }
 
+// Copies list items to the browser's local storage.
+// Note - local storage is text only i.e. no concept of objects and such.
+function mirrorToLocalStorage() {
+  localStorage.setItem('items', JSON.stringify(items));
+}
+
 shoppingForm.addEventListener('submit', handleSubmit);
 list.addEventListener('itemsUpdated', displayItems);
+list.addEventListener('itemsUpdated', mirrorToLocalStorage);
