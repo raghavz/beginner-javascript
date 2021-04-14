@@ -44,12 +44,26 @@ function displayItems() {
   list.innerHTML = html;
 }
 
-// Copies list items to the browser's local storage.
+// This copies list items to the browser's local storage.
 // Note - local storage is text only i.e. no concept of objects and such.
 function mirrorToLocalStorage() {
   localStorage.setItem('items', JSON.stringify(items));
 }
 
+// This loads the list back from local storage. We can use it to restore list when user reloads the page.
+function restoreFromLocalStorage() {
+  // Pull items from local storage.
+  const lsItems = JSON.parse(localStorage.getItem('items'));
+  if (lsItems.length) {
+    lsItems.forEach(item => items.push(item));
+    list.dispatchEvent(new CustomEvent('itemsUpdated'));
+  }
+}
+
 shoppingForm.addEventListener('submit', handleSubmit);
 list.addEventListener('itemsUpdated', displayItems);
 list.addEventListener('itemsUpdated', mirrorToLocalStorage);
+
+restoreFromLocalStorage();
+
+// Stopped at 38:35
