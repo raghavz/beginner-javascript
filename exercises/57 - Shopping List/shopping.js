@@ -31,6 +31,10 @@ function handleSubmit(e) {
   list.dispatchEvent(new CustomEvent('itemsUpdated'));
 }
 
+/*
+This displays all the items in the list. The disadvantage of this code as of 38:30 is that it will recreate 
+the entire list on the page when you add a new item.
+*/
 function displayItems() {
   const html = items
     .map(
@@ -66,4 +70,5 @@ list.addEventListener('itemsUpdated', mirrorToLocalStorage);
 
 restoreFromLocalStorage();
 
-// Stopped at 38:35
+// Stopped at 42:40
+// How to fix the shortcoming of function displayItems().
